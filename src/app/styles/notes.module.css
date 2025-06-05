@@ -1,0 +1,330 @@
+.notes_container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* .note_form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.popup_content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.note_form input,
+.note_form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.note_form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.note_form button {
+  padding: 8px 16px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.note_form button[type="button"] {
+  background: #f44336;
+  margin-left: 10px;
+}
+
+.notes_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.note_card {
+  /* padding: 15px; */
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid brown;
+  background: #ebb381;
+  border-radius: 8px;
+}
+
+.subheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.note_card h3 {
+  background: #ebb381;
+  padding: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.message {
+  padding: 8px;
+  background: white;
+  border-radius: 8px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.message p {
+  padding: 8px;
+  border-radius: 8px;
+
+  width: 100%;
+  height: 100px;
+}
+
+.note_actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.note_actions button {
+  padding: 5px 10px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.note_actions button:last-child {
+  background: #f44336;
+}
+
+/* styles/Popup.module.css */
+.popup_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup_content {
+  background-color: rgb(244 241 222);
+  /* padding: 20px; */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+}
+
+.popup_content .popup_title {
+  padding: 10px;
+  background-color: #ebb381;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.note_form .popup_button {
+  position: fixed;
+  right: 30px;
+  z-index: 100;
+  bottom: 30px;
+  padding: 8px 16px;
+  background-color: #ebb381;
+  border-radius: 50%;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.add_btns {
+  text-align: end;
+}
+.add_btns .close_button {
+  margin-top: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 8px 16px;
+}
+
+.edit {
+  background-color: white;
+}
+
+/* Add these styles to your existing CSS file */
+
+.edit_form_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit_form_container .edit_form {
+  background-color: white;
+  /* padding: 20px; */
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit_title {
+  background-color: #4caf50;
+}
+
+.form_title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.message_input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.form_actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.save_button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save_button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.cancel_button {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add these styles to your existing CSS file */
+
+.edit_form_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.edit_forms {
+  background-color: rgb(244 241 222);
+
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form_title {
+  padding: 10px;
+  background-color: #ebb381;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.edit_forms form {
+  padding: 20px;
+}
+
+.message_input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.form_actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.save_button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save_button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.cancel_button {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
