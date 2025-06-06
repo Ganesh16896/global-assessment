@@ -45,7 +45,7 @@ const NoteList = () => {
       />
 
       {notes.length === 0 ? (
-        <p>No notes yet. Add your first note above!</p>
+        <p>No notes yet. Add your Notes</p>
       ) : (
         <div className={styles.notes_grid}>
           {notes.map((note) => (
